@@ -1,8 +1,10 @@
 const express = require("express");
+const tokenRoutes = require("./token.route");
 const userRoute = require("./user.route");
 
-const  routes = express.Router();
+const router = express.Router();
 
-routes.use("/user",userRoute);
+router.use("/token", tokenRoutes);
+router.use("/user", userRoute);
 
-module.exports = routes;
+module.exports = router;
