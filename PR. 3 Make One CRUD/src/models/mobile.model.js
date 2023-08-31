@@ -5,10 +5,6 @@ const mobileSchema=new mongoose.Schema({
         type:String,
         trim:true
     },
-    table_no:{
-        type:Number,
-        trim:true
-    },
     mobile_company:{
         type:String,
         trim:true

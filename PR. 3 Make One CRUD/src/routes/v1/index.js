@@ -14,6 +14,7 @@ const router = express.Router();
 router.use("/user", userRoute);
 router.use('/category',  userCategory) ;
 router.use("/book", userBook);
+router.use("/mobile", userMobile );
 
 module.exports = router;
 

@@ -1,11 +1,13 @@
 const express=require("express");
-const {mobileValidation}=require("../../validations");
+const {createMobile}=require("../../validations/mobile.validation");
 const {mobileController}=require("../../controllers");
+const validate  = require("../../middlewares/validate");
 
 const router=express.Router()
 
 router.post(
     "/create-mobile",
+    validate(createMobile),
     mobileController.createMobile
 )
 

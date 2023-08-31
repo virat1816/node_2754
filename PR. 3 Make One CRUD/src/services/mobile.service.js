@@ -1,22 +1,22 @@
-const { Mobile } = require ("../models");
+const { mobile } = require ("../models");
 
 const createMobile = async (reqBody) => {
-  return Mobile.createMobile(reqBody);
+  return mobile.create(reqBody);
 };
 const getMobilelist = async (req, res) => {
-  return Mobile.find({ $or: [{ is_active: true }] });
+  return mobile.find({ $or: [{ is_active: true }] });
 };
 
 const getMobileById = async (mobileId) => {
-  return Mobile.findById(mobileId);
+  return mobile.findById(mobileId);
 };
 
 const updateDetails = async (mobileId, updateBody) => {
-  return Mobile.findByIdAndUpdate(mobileId, { $set: updateBody });
+  return mobile.findByIdAndUpdate(mobileId, { $set: updateBody });
 };
 
 const deleteMobile = async (mobileId) => {
-  return Mobile.findByIdAndDelete(mobileId);
+  return mobile.findByIdAndDelete(mobileId);
 };
 module.exports = {
   createMobile,
