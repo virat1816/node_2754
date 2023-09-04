@@ -12,6 +12,8 @@ module.exports.schoolValidation = require("./school.validation");
 module.exports.travelValidation = require("./travel.validation");
 module.exports.musicValidation = require("./music.validation");
 module.exports.jewelleryValidation = require("./jewellery.validation");
-module.exports.grocerydValidation = require("./grocery.validation");
+module.exports.groceryValidation = require("./grocery.validation");
+module.exports.studentValidation = require("./student.validation");
+
 
 

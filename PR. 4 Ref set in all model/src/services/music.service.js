@@ -1,4 +1,4 @@
-const Music = require("../models/music.model");
+const {Music} = require("../models/music.model");
 
 /**
  * Create user

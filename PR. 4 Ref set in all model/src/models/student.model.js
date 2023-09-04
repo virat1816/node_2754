@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 
-const schoolSchema = new mongoose.Schema({
-    school_name: {
+const StudentSchema = new mongoose.Schema({
+    student_name: {
         type: String,
         trim: true
     },
-    school_address: {
+    student_email: {
         type: String,
         trim: true
     },
-    school_principle: {
+    student_number: {
         type: String,
         trim: true
     },
-    school_time: {
+    student_course: {
         type: String,
         trim: true
     },
@@ -21,15 +21,16 @@ const schoolSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     },
-    stationry: {
-        type: mongoose.Types.ObjectId,
-        ref: "stationery"
-    }
+    // school : {
+    //     type : mongoose.Types.ObjectId,
+    //     ref : "school"
+    // }
 },
     {
         timestamps: true,
         versionKey: false
-    });
+    }
+);
 
-const School = mongoose.model("School", schoolSchema);
-module.exports = School;
+const Student = mongoose.model("student", StudentSchema);
+module.exports = Student;

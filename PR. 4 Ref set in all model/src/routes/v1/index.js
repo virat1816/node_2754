@@ -14,7 +14,8 @@ const usertravel = require("./travel.route.js");
 const userpharmacy = require("./pharmacy.route");
 const usermusic = require("./music.route.js");
 const userjewellery = require("./jewellery.route");
-const usergrocery = require("./grocery.route")
+const usergrocery = require("./grocery.route");
+const userstudent = require("./student.route")
 
 
 
@@ -37,6 +38,7 @@ router.use( '/pharmacy' ,userpharmacy);
 router.use( '/music' ,usermusic);
 router.use( '/jewellery' ,userjewellery);
 router.use( '/grocery' ,usergrocery);
+router.use('/student' ,userstudent);
 
 module.exports = router;
 

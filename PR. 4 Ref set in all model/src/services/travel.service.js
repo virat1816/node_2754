@@ -1,4 +1,4 @@
-const Travel = require("../models/travel.model");
+const {Travel} = require("../models/travel.model");
 
 /**
  * Create user

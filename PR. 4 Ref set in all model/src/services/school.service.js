@@ -1,4 +1,4 @@
-const School = require("../models/school.model");
+const {School} = require("../models/school.model");
 
 /**
  * Create user
