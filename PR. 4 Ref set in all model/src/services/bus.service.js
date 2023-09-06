@@ -1,4 +1,4 @@
-const Bus  = require("../models/bus.model");
+const Bus  = require("../models");
 
 /**
  * Create user

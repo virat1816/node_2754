@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const travelValidation = require("../../validations/travel.validation");
-const Controller = require("../../controllers/travel.controller");
+const {travelValidation} = require("../../validations");
+const {travelController} = require("../../controllers");
 const validate = require("../../middlewares/validate");
 
 
@@ -9,17 +9,17 @@ const validate = require("../../middlewares/validate");
 router.post(
   "/create-travel",
   validate(travelValidation.createTravel),
-  Controller.createTravel
+  travelController.createTravel
 );
 
 router.get(
   "/List-travel",
   validate(travelValidation.getTravel),
-  Controller.getTravel
+  travelController.getTravel
 );
 
 router.delete(
   "/delete-travel/:Id",
-  Controller.deleteTravel
+  travelController.deleteTravel
 )
 module.exports = router;

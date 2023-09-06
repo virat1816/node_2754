@@ -1,4 +1,4 @@
-const {Jewellery} = require("../models/jewellery.model");
+const {Jewellery} = require("../models");
 
 /**
  * Create user

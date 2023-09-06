@@ -1,4 +1,4 @@
-const {Grocery} = require("../models/grocery.model");
+const {Grocery} = require("../models");
 
 /**
  * Create user

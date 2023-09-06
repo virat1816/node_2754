@@ -1,6 +1,4 @@
-const {
-    travelService
-} = require("../services");
+const { travelService } = require("../services");
 
 const createTravel = async (req, res) => {
     try {

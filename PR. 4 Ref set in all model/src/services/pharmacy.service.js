@@ -1,4 +1,4 @@
-const Pharmacy = require("../models/pharmacy.model");
+const Pharmacy = require("../models");
 
 /**
  * Create user

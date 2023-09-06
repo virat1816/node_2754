@@ -21,10 +21,10 @@ const StudentSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     },
-    // school : {
-    //     type : mongoose.Types.ObjectId,
-    //     ref : "school"
-    // }
+    school : {
+        type : mongoose.Types.ObjectId,
+        ref : "school"
+    }
 },
     {
         timestamps: true,

@@ -1,4 +1,4 @@
-const {product, Product} = require("../models");
+const {Product} = require("../models");
 
 /**
  * Create user
@@ -7,15 +7,16 @@ const {product, Product} = require("../models");
  */
 
 const createProduct = async(reqBody)=>{
-    return product.create(reqBody);
+    return Product.create(reqBody);
 };
 
 const getProductList = async(req,res) =>{
-    return product.find();
+    return Product.find().populate("category");
+
 };
 
 const deleteProduct = async(productId) =>{
-    return product.findByIdAndDelete(productId);
+    return Product.findByIdAndDelete(productId);
 };
 const updateDetails = async (categoryId, updateBody) => {
     return Product.findByIdAndUpdate(categoryId, { $set: updateBody });
@@ -23,5 +24,6 @@ const updateDetails = async (categoryId, updateBody) => {
 module.exports = {
     createProduct,
     getProductList,
-    deleteProduct
+    deleteProduct,
+
 }

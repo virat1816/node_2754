@@ -1,4 +1,4 @@
-const {Stationery} = require("../models/stationery.model");
+const {Stationery} = require("../models");
 
 /**
  * Create user

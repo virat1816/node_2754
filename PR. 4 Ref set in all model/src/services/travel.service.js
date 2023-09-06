@@ -1,4 +1,4 @@
-const {Travel} = require("../models/travel.model");
+const {Travel} = require("../models");
 
 /**
  * Create user
@@ -6,7 +6,7 @@ const {Travel} = require("../models/travel.model");
  * @returns {Promise<User>}
  */
 const createTravel = async (reqBody) => {
-    return Travel.create(reqBody);
+    return Travel.create(reqBody)
 };
 
 const getTravelList = async () => {
