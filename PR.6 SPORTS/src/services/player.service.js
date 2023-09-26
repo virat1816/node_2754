@@ -1,23 +1,34 @@
-const Player = require("../models/player")
+const { player } = require("../models");
 
+// create image
 const createPlayer = async (reqBody) => {
-    return Player.create(reqBody)
+    return player.create(reqBody);
 };
 
-const listPlayer = async () => {
-    return Player.find({ $or: [{ is_active: "true" }] }).populate("team", { Team_name: 1 });
+// get player list
+const getPlayerList = async (req,res) => {
+    return player.find();
 };
 
-const getId = async (id) => {
-    return Player.findById(id);
+// delete player
+const deletePlayer = async (playerId) => {
+    return player.findOneAndDelete(playerId);
 };
 
-const deletePlayer = async (Id) => {
-    return Player.findByIdAndDelete(Id)
+// get player details by id
+const getPlayerById = async (playerId) => {
+    return player.findById(playerId)
 };
 
-const updatePlayer = async (Id, updatebody) => {
-    return Player.findByIdAndUpdate(Id, { $set: updatebody })
+// update player details
+const updatePlayer = async (playerId, reqBody) => {
+    return player.findByIdAndUpdate(playerId, { $set: reqBody });
+};
+
+module.exports = {
+    createPlayer,
+    getPlayerList,
+    deletePlayer,
+    getPlayerById,
+    updatePlayer
 }
-
-module.exports = { createPlayer, listPlayer, deletePlayer, getId, updatePlayer }

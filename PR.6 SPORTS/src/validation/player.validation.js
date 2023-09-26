@@ -8,8 +8,7 @@ const createPlayer = {
         Nationality: Joi.string().required().trim(),
         Gender: Joi.string().required().trim(),
         Phone: Joi.string().required().trim(),
-        // Player_photo: Joi.string().allow("").trim()
-        team: Joi.string().allow("").trim()
+        sport_image: Joi.string().allow(""),
     })
 };
 
@@ -21,8 +20,7 @@ const listPlayer = {
         Nationality: Joi.string().allow("").trim(),
         Gender: Joi.string().allow("").trim(),
         Phone: Joi.string().allow("").trim(),
-        // Player_photo: Joi.string().allow("").trim()
-        team: Joi.string().allow("").trim()
+        sport_image: Joi.string().allow("").trim(),
     })
 }
 

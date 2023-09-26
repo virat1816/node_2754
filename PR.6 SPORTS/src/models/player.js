@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const PlayerSchema = new mongoose.Schema({
     First_name: {
@@ -25,23 +26,25 @@ const PlayerSchema = new mongoose.Schema({
         type: Number,
         trim: true
     },
-    // Player_photo: {
-    //     type: String,
-    //     trim: true
-    // },
+    sport_image: {
+        type: String,
+        trim: true
+    },
     is_active: {
         type: Boolean,
         default: true
-    },
-    team :{
-        type:mongoose.Types.ObjectId,
-        ref:'team'
     }
-},
-    {
-        timestamps: true,
-        versionKey: false
-    });
+}, {
+    timestamps: true,
+    versionKey: false,
+    toJSON: {
+        transform: function (doc, data) {
+            if (data ?.sport_image) {
+                data.sport_image = `${config.base_url}sport_images/${data.sport_image}`;
+            }
+        },
+    },
+});
 
-    const Player = mongoose.model("player",PlayerSchema);
-    module.exports=Player;
+const Player = mongoose.model("player", PlayerSchema);
+module.exports = Player;
