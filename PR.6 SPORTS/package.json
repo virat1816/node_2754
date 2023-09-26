@@ -7,7 +7,7 @@
     "test": "e1cho \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js"
   },
-  "author": "jenil",
+  "author": "virat",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
