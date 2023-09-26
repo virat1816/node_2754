@@ -1,0 +1,17 @@
+module.exports.userService = require("./user.service");
+module.exports.tokenService = require("./token.service");
+module.exports.emailService = require("./email.service");
+module.exports.categoryService = require("./category.service");
+module.exports.productService = require('./product.service');
+module.exports.bookService = require("./book.service");
+module.exports.hotelService = require("./hotel.service");
+module.exports.busService = require("./bus.service");
+module.exports.stationeryService = require("./stationery.service");
+module.exports.movieService = require("./movie.service");
+module.exports.schoolService = require("./school.service");
+module.exports.travelService = require("./travel.service");
+module.exports.pharmacyService = require("./pharmacy.service");
+module.exports.musicService = require("./music.service");
+module.exports.jewelleryService = require("./jewellery.service");
+module.exports.groceryService = require("./grocery.service");
+module.exports.studentService = require("./student.service");
