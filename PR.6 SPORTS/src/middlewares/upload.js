@@ -6,7 +6,7 @@ const path = require("path");
 const storage__ = multer.diskStorage({
   destination: function (req, file, cb) {
     if (file.fieldname == "sport_image") {
-      console.log(__dirname,'__dirname');
+      console.log(__dirname, '__dirname');
       fs.mkdirSync(path.join(__dirname, "../public/sport_images"), {
         recursive: true,
       });
@@ -26,4 +26,6 @@ const upload = multer({
   storage: storage__,
 });
 
-module.exports = { upload };
+module.exports = {
+  upload
+};
