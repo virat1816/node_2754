@@ -5,7 +5,7 @@ const CoachSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    DOB: {
+    dob: {
         type: String,
         trim: true
     },
